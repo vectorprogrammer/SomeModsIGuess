@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "minecraft:shulker",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_in_dimension": "minecraft:the_end",
+        "minecraft:spawns_on_block_filter": "minecraft:purpur_block",
+        "minecraft:is_in_structure": {
+          "structure_set": "minecraft:end_city"
+        },
+        "minecraft:weight": 10,
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 2
+        },
+        "minecraft:spawns_on_surface": {}
+      }
+    ]
+  }
+}
