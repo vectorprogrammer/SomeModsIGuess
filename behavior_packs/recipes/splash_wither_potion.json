@@ -1,14 +1,12 @@
 {
   "format_version": "1.16.100",
-  "minecraft:recipe_brewing_mix": {
+  "minecraft:recipe_brewing_container": {
     "description": {
-      "identifier": "myaddon:splash_wither_conversion"
+      "identifier": "mycustom:brew_splash_potion_of_decay"
     },
-    "tags": [
-      "brewing_stand"
-    ],
-    "input": "minecraft:potion",
+    "tags": [ "brewing_stand" ],
+    "input": "minecraft:potion:24",
     "reagent": "minecraft:gunpowder",
-    "output": "minecraft:splash_potion"
+    "output": "minecraft:splash_potion:24"
   }
 }
