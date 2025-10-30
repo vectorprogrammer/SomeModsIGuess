@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "convertedjava:wither_potion_mix"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "minecraft:potion_type:awkward",
+    "reagent": "convertedjava:withered_bone", 
+    "output": "minecraft:potion_type:wither" 
+  }
+}
