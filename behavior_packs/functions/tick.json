@@ -1,0 +1,8 @@
+{
+    "values": [
+        "config/setup",
+        "vault_replenish",
+        "loot_replenish",
+        "ore_respawn_slow"
+    ]
+}
