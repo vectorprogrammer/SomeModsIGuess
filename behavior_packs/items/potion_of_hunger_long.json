@@ -2,7 +2,7 @@
   "format_version": "1.20.10",
   "minecraft:item": {
     "description": {
-      "identifier": "convertedjava:potion_of_hunger",
+      "identifier": "convertedjava:potion_of_hunger_long",
       "category": "equipment"
     },
     "components": {
