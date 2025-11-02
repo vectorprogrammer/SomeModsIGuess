@@ -6,29 +6,38 @@
       "category": "equipment"
     },
     "components": {
+      "minecraft:use_duration": 32,
       "minecraft:icon": {
         "texture": "potion_of_hunger"
       },
-      "minecraft:display_name": {
-        "value": "item.convertedjava:potion_of_hunger.name"
-      },
-      "minecraft:max_stack_size": 1,
-      "minecraft:use_duration": 1.6,
-      "minecraft:use_animation": "drink",
-      "minecraft:potion": {
+      "minecraft:food": {
         "on_consume": {
-          "event": "apply_effect"
+          "event": "effect_data_[query.aux_value]"
         },
-        "residue": "minecraft:glass_bottle"
+        "can_always_eat": true,
+        "is_drink": true
       }
     },
     "events": {
-      "apply_effect": {
+      "effect_data_0": {
         "add_mob_effect": {
           "effect": "hunger",
-          "target": "self",
-          "duration": 900,
+          "duration": 3600,
           "amplifier": 0
+        }
+      },
+      "effect_data_1": {
+        "add_mob_effect": {
+          "effect": "hunger",
+          "duration": 9600,
+          "amplifier": 0
+        }
+      },
+      "effect_data_2": {
+        "add_mob_effect": {
+          "effect": "hunger",
+          "duration": 1800,
+          "amplifier": 1
         }
       }
     }
