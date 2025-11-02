@@ -1,0 +1,27 @@
+{
+    "resource_pack_name": "convertedjava",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "potion_of_hunger": {
+            "textures": "textures/items/drink_potion_hunger"
+        },
+        "splash_potion_of_hunger": {
+            "textures": "textures/items/splash_potion_hunger"
+        }
+        "lingering_potion_of_hunger": {
+          "textures": "textures/items/lingering_potion_hunger"
+        }
+        "tipped_arrow_hunger":{
+          "textures": "/textures/items/tipped_arrow_hunger"
+        }
+        "withered_bone": {
+          "textures": "textures/items/withered_bonemeal"
+        }
+        "tipped_arrow_miningfatigue": {
+          "textures": "textures/items/tipped_arrow_miningfatigue"
+        }
+        "tipped_arrow_levitation": {
+          "textures": "textures/items/tipped_arrow_levitation"
+        }
+    }
+}
