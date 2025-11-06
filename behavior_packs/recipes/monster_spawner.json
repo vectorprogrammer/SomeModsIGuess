@@ -2,7 +2,7 @@
   "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "modid:craftable_mob_spawner"
+      "identifier": "convertedjava:craft_mob_spawner"
     },
     "tags": [
       "crafting_table"
