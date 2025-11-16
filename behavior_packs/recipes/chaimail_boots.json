@@ -5,7 +5,8 @@
       "identifier": "converteredjava:chainmail_boots"
     },
     "tags": [ 
-      "crafting_table"
+      "crafting_table",
+      "crafter"
     ],
     "pattern": [
       "   ",
