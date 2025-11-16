@@ -1,89 +1,133 @@
 {
-  "format_version": "1.20.0",
-  "minecraft:entity": {
-    "description": {
-      "identifier": "convertedjava:wither_skeleton_captain",
-      "is_spawnable": true,
-      "is_summonable": true,
-      "is_client_side_only": false
-    },
-    "components": {
-      // Basic inheritance and persistence
-      "minecraft:type_family": { "family": [ "wither", "monster", "undead", "skeleton" ] },
-      "minecraft:collision_box": { "width": 0.7, "height": 2.4 },
-      "minecraft:health": { "value": 20, "max": 20 },
-      "minecraft:movement": { "value": 0.25 },
-      "minecraft:despawn_on_distance": {
-        "min_distance": 0,
-        "max_distance": 0 // Prevents despawning by restricting the range to 0
-      },
-      "minecraft:loot": {
-        "table": "loot_tables/entities/convertedjava_wither_skeleton_captain.json"
-      },
-      
-      // Give it the Netherite Sword
-      "minecraft:equipment": {
-        "table": "", // Empty table to use the fixed slots
-        "slots": [
-          {
-            "slot": "slot.weapon.mainhand",
-            "item": "minecraft:netherite_sword"
-          }
-        ]
-      },
-      
-      // Default Hostile Behaviors (until Tamed)
-      "minecraft:behavior.float": { "priority": 0 },
-      "minecraft:behavior.melee_attack": { "priority": 2, "speed_multiplier": 1.2 },
-      "minecraft:behavior.nearest_attackable_target": {
-        "priority": 4,
-        "must_see": true,
-        "entity_types": [
-          { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 16 }
-        ]
-      },
-      "minecraft:behavior.hurt_by_target": { "priority": 1 },
-      "minecraft:behavior.random_stroll": { "priority": 5, "speed_multiplier": 0.8 },
-      "minecraft:behavior.look_at_player": { "priority": 6, "look_distance": 8 },
-      "minecraft:behavior.random_look_around": { "priority": 7 }
-    },
-    
-    // Tamed Logic
-    "component_groups": {
-      "convertedjava:tamed_captain": {
-        "minecraft:is_tamed": {}, // Use vanilla 'is_tamed' component
-        // Override hostile behavior to target only monsters, making it docile to players
-        "minecraft:behavior.nearest_attackable_target": {
-          "priority": 4,
-          "must_see": true,
-          "entity_types": [
-            { "filters": { "test": "is_family", "subject": "other", "value": "monster" }, "max_dist": 16 }
-          ]
+    "format_version": "1.18.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "convertedjava:wither_skeleton_captain",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_id": "minecraft:wither_skeleton"
         },
-        // Follow the nearest player
-        "minecraft:behavior.target_nearby_sensor": {
-          "inside_range": 0.0,
-          "outside_range": 10.0,
-          "must_see": true,
-          "target_types": [
-            { "entity_type": "player" }
-          ]
+        "component_groups": {
+            "convertedjava:tamed": {
+                "minecraft:behavior.follow_owner": {
+                    "priority": 1,
+                    "speed_multiplier": 1.2
+                },
+                "minecraft:behavior.owner_hurt_target": {
+                    "priority": 2
+                },
+                "minecraft:behavior.owner_hurt_by_target": {
+                    "priority": 3
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 4,
+                    "reassess_interval": 10,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    { "test": "is_family", "subject": "other", "operator": "!=", "value": "owner" },
+                                    { "test": "is_family", "subject": "other", "operator": "!=", "value": "tame" }
+                                ]
+                            },
+                            "max_dist": 64,
+                            "must_see": true,
+                            "vulnerable": true
+                        }
+                    ]
+                }
+            }
         },
-        "minecraft:behavior.move_to_target": {
-          "priority": 2,
-          "speed_multiplier": 1.0
+        "components": {
+            "minecraft:type_family": {
+                "family": [ "skeleton", "undead", "monster", "wither" ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.7,
+                "height": 2.4
+            },
+            "minecraft:nameable": {},
+            "minecraft:health": {
+                "value": 20
+            },
+            "minecraft:attack":{
+              "damage": 5,
+              "effect_name": "wither"
+              "effect_duration": 15
+            },
+            "minecraft:movement": {
+                "value": 0.25
+            },
+            "minecraft:jump.static": {},
+            "minecraft:navigation.walk": {
+                "is_amphibious": false,
+                "can_pass_doors": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:on_fire": {
+                "on_fire_time_in_seconds": 15,
+                "condition": "query.is_in_sunlight"
+            },
+            "minecraft:despawn_on_peaceful": {},
+            "minecraft:is_persistent": {},
+            "minecraft:loot": "loot_tables/entities/wither_skeleton.json",
+            "minecraft:tameable": {
+                "probability": 1.0,
+                "tame_items": [
+                    "glowstone"
+                ]
+            },
+            "minecraft:equipment": {
+                "table": "loot_tables/equipment/wither_skeleton_captain_equipment.json"
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.ranged_attack": {
+                "priority": 2,
+                "speed_multiplier": 1.0,
+                "attack_interval": 1.0,
+                "entity_types": [
+                    { "max_dist": 15.0, "min_dist": 10.0, "filters": { "test": "is_family", "subject": "other", "value": "player" } }
+                ]
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 3,
+                "reassess_interval": 10,
+                "entity_types": [
+                    { "max_dist": 64, "must_see": true, "vulnerable": true, "filters": { "test": "is_family", "subject": "other", "value": "player" } }
+                ]
+            },
+            "minecraft:behavior.move_towards_restriction": {
+                "priority": 4,
+                "speed_multiplier": 0.6
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 5,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 6,
+                "look_distance": 8.0,
+                "perceived_chance": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "tags": ["captain"]
+                }
+            },
+            "minecraft:on_tame": {
+                "add": {
+                    "component_groups": ["convertedjava:tamed"],
+                    "tags": ["captain_tamed"]
+                }
+            }
         }
-      }
-    },
-    
-    "events": {
-      // Event triggered by the MCFunction when tamed
-      "convertedjava:tamed": {
-        "add": {
-          "component_groups": ["convertedjava:tamed_captain"],
-          "tags": ["convertedjava:tamed"] // Tag used by MCFunctions
-        }
-      }
     }
-  }
 }
