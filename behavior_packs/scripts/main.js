@@ -1,10 +1,5 @@
-import { world, system } from "@minecraft/server";
-import { checkTreeGrowth } from "./creaking_heart.js";
-
-const TICK_RATE = 20; // 20 ticks per second
-
-system.runInterval(() => {
-}, TICK_RATE);
-world.afterEvents.blockChange.subscribe((event) => {
-    checkTreeGrowth(event);
+import { world } from "@minecraft/server";
+import "./pale_oak_growth_drops";
+world.afterEvents.worldIntialize.subscribe(()=>{
+    world.sendMessage("Scripting API initalized");
 });
