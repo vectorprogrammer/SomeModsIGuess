@@ -1,0 +1,85 @@
+{
+	"namespace": "convertedjava",
+	"netherite_crafter_screen": {
+		"type": "screen",
+		"is_modal": true,
+		"wants_keyboard_events": true,
+		"screen_is_hiding_persistant_gui": true,
+		"send_telemetry": false,
+		"force_render_below": true,
+		"content": {
+			"type": "panel",
+			"size": ["100%", "100%"],
+			"controls": [
+				{ "container_background@common.screen_background": {} },
+				{
+					"crafter_grid@common.grid_panel": {
+						"size": [360, 260],
+						"anchor_from": "center",
+						"anchor_to": "center",
+						"grid_dimensions": [10, 15],
+						"controls": [
+							{
+								"crafter_title@common.header_label": {
+									"text": "Netherite Crafter",
+									"font_type": "MinecraftTen",
+									"row": 0, "column": 0, "column_span": 10
+								}
+							},
+							{ "armor_label": { "type": "label", "text": "Netherite Armor", "row": 1, "column": 0, "color": "$nether_color" } },
+							{ "helmet_label": { "type": "label", "text": "Helmet", "row": 2, "column": 0, "font_size": "small" } },
+							{ "helmet_ingot_slot@common.inventory_slot_grid": { "row": 2, "column": 1, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 0] } },
+							{ "arrow_sprite@common.arrow_image": { "row": 2, "column": 2 } },
+							{ "helmet_output_slot@common.inventory_slot_grid": { "row": 2, "column": 3, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 1] } },
+							{ "chestplate_label": { "type": "label", "text": "Chestplate", "row": 3, "column": 0, "font_size": "small" } },
+							{ "chestplate_ingot1_slot@common.inventory_slot_grid": { "row": 3, "column": 1, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 2] } },
+							{ "chestplate_ingot2_slot@common.inventory_slot_grid": { "row": 3, "column": 2, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 3] } },
+							{ "arrow_sprite_c@common.arrow_image": { "row": 3, "column": 3 } },
+							{ "chestplate_output_slot@common.inventory_slot_grid": { "row": 3, "column": 4, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 4] } },
+							{ "leggings_label": { "type": "label", "text": "Leggings", "row": 4, "column": 0, "font_size": "small" } },
+							{ "leggings_ingot_slot@common.inventory_slot_grid": { "row": 4, "column": 1, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 5] } },
+							{ "arrow_sprite_l@common.arrow_image": { "row": 4, "column": 2 } },
+							{ "leggings_output_slot@common.inventory_slot_grid": { "row": 4, "column": 3, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 6] } },
+							{ "boots_label": { "type": "label", "text": "Boots", "row": 5, "column": 0, "font_size": "small" } },
+							{ "boots_ingot_slot@common.inventory_slot_grid": { "row": 5, "column": 1, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 7] } },
+							{ "arrow_sprite_b@common.arrow_image": { "row": 5, "column": 2 } },
+							{ "boots_output_slot@common.inventory_slot_grid": { "row": 5, "column": 3, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 8] } },
+							{ "tools_label": { "type": "label", "text": "Netherite Tools", "row": 1, "column": 6, "color": "$nether_color" } },
+							{ "axe_label": { "type": "label", "text": "Axe", "row": 2, "column": 6, "font_size": "small" } },
+							{ "axe_ingot_slot@common.inventory_slot_grid": { "row": 2, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 9] } },
+							{ "axe_stick_slot@common.inventory_slot_grid": { "row": 2, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 10] } },
+							{ "arrow_sprite_a@common.arrow_image": { "row": 2, "column": 9 } },
+							{ "axe_output_slot@common.inventory_slot_grid": { "row": 2, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 11] } },
+							{ "hoe_label": { "type": "label", "text": "Hoe", "row": 3, "column": 6, "font_size": "small" } },
+							{ "hoe_ingot_slot@common.inventory_slot_grid": { "row": 3, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 12] } },
+							{ "hoe_stick_slot@common.inventory_slot_grid": { "row": 3, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 13] } },
+							{ "arrow_sprite_h@common.arrow_image": { "row": 3, "column": 9 } },
+							{ "hoe_output_slot@common.inventory_slot_grid": { "row": 3, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 14] } },
+							{ "pickaxe_label": { "type": "label", "text": "Pickaxe", "row": 4, "column": 6, "font_size": "small" } },
+							{ "pickaxe_ingot_slot@common.inventory_slot_grid": { "row": 4, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 15] } },
+							{ "pickaxe_stick_slot@common.inventory_slot_grid": { "row": 4, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 16] } },
+							{ "arrow_sprite_p@common.arrow_image": { "row": 4, "column": 9 } },
+							{ "pickaxe_output_slot@common.inventory_slot_grid": { "row": 4, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 17] } },
+							{ "spear_label": { "type": "label", "text": "Spear", "row": 5, "column": 6, "font_size": "small" } },
+							{ "spear_ingot_slot@common.inventory_slot_grid": { "row": 5, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 18] } },
+							{ "spear_stick_slot@common.inventory_slot_grid": { "row": 5, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 19] } },
+							{ "arrow_sprite_s@common.arrow_image": { "row": 5, "column": 9 } },
+							{ "spear_output_slot@common.inventory_slot_grid": { "row": 5, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 20] } },
+							{ "shovel_label": { "type": "label", "text": "Shovel", "row": 6, "column": 6, "font_size": "small" } },
+							{ "shovel_ingot_slot@common.inventory_slot_grid": { "row": 6, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 21] } },
+							{ "shovel_stick_slot@common.inventory_slot_grid": { "row": 6, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 22] } },
+							{ "arrow_sprite_sh@common.arrow_image": { "row": 6, "column": 9 } },
+							{ "shovel_output_slot@common.inventory_slot_grid": { "row": 6, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 23] } },
+							{ "sword_label": { "type": "label", "text": "Sword", "row": 7, "column": 6, "font_size": "small" } },
+							{ "sword_ingot_slot@common.inventory_slot_grid": { "row": 7, "column": 7, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 24] } },
+							{ "sword_stick_slot@common.inventory_slot_grid": { "row": 7, "column": 8, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 25] } },
+							{ "arrow_sprite_sw@common.arrow_image": { "row": 7, "column": 9 } },
+							{ "sword_output_slot@common.inventory_slot_grid": { "row": 7, "column": 10, "size": [18, 18], "slot_binding_type": "container", "slot_binding_params": ["inventory", 26] } },
+							{ "player_inventory@common.player.inventory_panel": { "row": 9, "column": 0, "column_span": 10 } }
+						]
+					}
+				}
+			]
+		}
+	}
+}
