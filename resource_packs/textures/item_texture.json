@@ -14,9 +14,6 @@
         "tipped_arrow_hunger":{
           "textures": "/textures/items/tipped_arrow_hunger"
         }
-        "withered_bone": {
-          "textures": "textures/items/withered_bonemeal"
-        }
         "tipped_arrow_miningfatigue": {
           "textures": "textures/items/tipped_arrow_miningfatigue"
         }
