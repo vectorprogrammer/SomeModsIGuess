@@ -5,8 +5,7 @@
       "identifier": "convertedjava:craft_mob_spawner"
     },
     "tags": [
-      "crafting_table",
-      "crafter"
+      "crafting_table"
     ],
     "pattern": [
       " F ",
