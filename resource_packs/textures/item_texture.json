@@ -20,5 +20,8 @@
         "tipped_arrow_levitation": {
           "textures": "textures/items/tipped_arrow_levitation"
         }
+        "netherite_crafter": {
+            "textures": "textures/items/netherite_crafter"
+        }
     }
 }
