@@ -2,7 +2,7 @@
   "format_version": "1.20.30",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "convertedjava:emerald_chestplate_recipe"
+      "identifier": "convertedjava:emerald_chestplate"
     },
     "tags": [
       "crafting_table"
