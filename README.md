@@ -1,5 +1,5 @@
-# SomeModsIGuess
-This is the SomeModsIGuess add-on for Bedrock Minecraft system.
+# Features-Bedrock
+This is the Features-Bedrock add-on for Bedrock Minecraft system.
 # Prequisites
 When spawning in, use a command block or cheats to run this ```/scoreboard objectives add TameSuccess dummy```. This is required by the Wither Skeleton Captain module. Youcan achieve this either by using a command block or administrative privileges.
 
