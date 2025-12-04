@@ -1,5 +1,5 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.16.100",
   "minecraft:spawn_rules": {
     "description": {
       "identifier": "minecraft:evoker",
@@ -9,22 +9,11 @@
       {
         "minecraft:structure_filter": {
           "structure_id": "woodland_mansion",
-          "block_filters": [
-            "minecraft:wood",
-            "minecraft:planks"
-          ],
           "allow_inside": true,
           "allow_outside": false
         },
-        "minecraft:spawns_on_block_filter": {
-          "blocks": [
-            "minecraft:wood",
-            "minecraft:planks",
-            "minecraft:carpet"
-          ]
-        },
         "minecraft:weight": {
-          "default": 40 // Sets the 40% relative chance
+          "default": 40
         },
         "minecraft:brightness_filter": {
           "min": 0,
