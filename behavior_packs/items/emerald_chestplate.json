@@ -15,9 +15,9 @@
         "value": 14,
         "slot": "armor_torso"
       },
-      "minecraft:durability": {
-        "max_durability": 530
-      },
+      "minecraft:durability":{
+        
+      }
       "minecraft:display_name":{
         "value": "Emerald Chestplate"
       }
