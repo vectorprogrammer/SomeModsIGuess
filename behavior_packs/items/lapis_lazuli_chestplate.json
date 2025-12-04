@@ -34,7 +34,8 @@
           "minecraft:trimmable_armors"
         ]
       },
-      "minecraft:icon": {"texture": "lapis_lazuli_chestplate"}
+      "minecraft:icon": {"texture": "lapis_lazuli_chestplate"},
+      "minecraft:display_name":{"value": "Lapis Lazuli Chestplate"}
     }
   }
 }
