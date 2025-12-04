@@ -34,8 +34,11 @@
         "texture_type": "emerald_chestplate",
         "armor_toughness": 0
       },
-      "minecraft:attachable": {
-        "attach_to": "minecraft:player"
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_armor",
+          "minecraft:trimmable_armors"
+        ]
       }
     }
   }
