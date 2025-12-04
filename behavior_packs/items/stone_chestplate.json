@@ -30,8 +30,12 @@
       },
       "minecraft:wearable": {
         "slot": "slot.armor.chest",
+        "dispensable": true 
+      },
+      "minecraft:armor":{
         "protection": 5,
-        "dispense_on_crit_hit": true 
+        "texture": "stone_chestplate",
+        "armor_toughness": 0
       },
       "minecraft:icon": {
         "texture": "stone_chestplate"
