@@ -31,11 +31,6 @@
         "slot": "slot.armor.chest",
         "dispensable": true
       },
-      "minecraft:armor": {
-        "protection": 7,
-        "texture_type": "emerald_chestplate",
-        "armor_toughness": 0
-      },
       "minecraft:tags": {
         "tags": [
           "minecraft:is_armor",
