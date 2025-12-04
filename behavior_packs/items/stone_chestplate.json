@@ -3,7 +3,8 @@
   "minecraft:item": {
     "description": {
       "identifier": "featuresbedrock:stone_chestplate",
-      "category": "equipment"
+      "category": "equipment",
+      "group": "itemGroup.name.chestplate"
     },
     "components": {
       "minecraft:max_stack_size": 1,
