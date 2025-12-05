@@ -19,7 +19,7 @@
         "max_durability": 530
       }
       "minecraft:display_name":{
-        "value": "Emerald Chestplate"
+        "value": "item.featuresbedrock:emerald_chestplate.name"
       }
       "minecraft:repairable": {
         "repair_items": [
