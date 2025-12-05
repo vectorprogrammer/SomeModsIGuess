@@ -24,7 +24,6 @@
       "minecraft:repairable": {
         "repair_items": [
           { "items": [ "minecraft:emerald" ], "repair_amount": "query.max_durability * 0.25" }
-          { "items": ["featuresbedrock:emerald_chestplate"], "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"}
         ]
       },
       "minecraft:wearable": {
