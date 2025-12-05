@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "featuresbedrock:redstone_helmet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "###"
+      "# #"
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item":"featuresbedrock:redstone_ingot"
+      }
+    },
+    "result": {
+      "item":"featuresbedrock:redstone_helmet"
+    }
+  },
+}
