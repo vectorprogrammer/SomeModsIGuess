@@ -17,7 +17,10 @@ const REGENERATING_ORES = [
     "minecraft:redstone_ore",
     "minecraft:deepslate_redstone_ore",
     "minecraft:lapis_ore",
-    "minecraft:deepslate_lapis_ore"
+    "minecraft:deepslate_lapis_ore",
+    "minecraft:suspicious_sand",
+    "minecraft:suspicious_gravel",
+    "minecraft:gravel"
 ];
 const TEMPORARY_BLOCK_ID = "minecraft:cobblestone";
 const blocksToRegenerate = [];
