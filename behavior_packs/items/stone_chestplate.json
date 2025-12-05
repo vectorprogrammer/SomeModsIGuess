@@ -43,6 +43,14 @@
       "minecraft:icon": {
         "texture": "stone_chestplate"
       },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_armor",
+          "minecraft:trimmable_armors",
+          "minecraft:is_trimmable",
+          "minecraft:is_wearable"
+        ]
+      }
       "minecraft:display_name": {
         "value": "Stone Chestplate"
       }
