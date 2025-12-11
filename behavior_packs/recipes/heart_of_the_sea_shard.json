@@ -1,0 +1,21 @@
+{
+  "format_version":"1.12",
+  "minecraft:recipe_shapeless": {
+    "description":{
+      "identifier":"minecraft:heart_of_the_sea"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "featuresbedrock:heart_of_the_sea_shard",
+        "count": 4
+      }
+    ],
+    "result": {
+      "item":"minecraft:heart_of_the_sea"
+      "count": 1
+    }
+  }
+}
