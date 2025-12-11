@@ -4,7 +4,6 @@
     "description": {
       "identifier": "featuresbedrock:redstone_ingot",
       "menu_category": {
-        "group": "itemGroup.name.redstone",
         "category": "items"
       }
     },
