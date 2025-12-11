@@ -1,0 +1,137 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity":{
+    "description": {
+      "identifier": "featuresbedrock:wither_skeleton_captain",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": true,
+    },
+    "components":{
+      "minecraft:type_family": {
+        "family": ["wither", "monster", "undead", "skeleton", "mob"]
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:behavior.summon_entity":{
+        "priority": 3,
+        "summon_choices":[
+          {
+            "weight": 1,
+            "entity":"wither_skeleton"
+          }
+        ],
+        "cooldown_range":[40,40],
+        "min_activation_range": 0,
+        "max_activation_range": 20
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization":{
+      },
+      "minecraft:health": {
+        "value": 40,
+        "max": 40
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:collision_box": {
+        "width": 0.72,
+        "height": 2.01
+      },
+      "minecraft:fire_immune": {
+      },
+      "minecraft:behavior.owner_hurt_by_target": {
+        "priority":1
+      },
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)): 0"
+      },
+      "minecraft:behavior.owner_hurt_target": {
+        "priority": 2
+      },
+      "minecraft:tameable":{
+        "probability": 0.2,
+        "tame_items": "netherite_scrap",
+        "tame_event": {
+          "event": "minecraft:on_tame",
+          "target": "self"
+        }
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "can_walk_in_lava": true,
+        "can_path_over_lava": true,
+        
+      },
+      "minecraft:equip_item": {
+      },
+      "minecraft:attack": {
+        "damage": 6,
+        "effect_name": "wither",
+        "effect_duration": 15
+      },
+      "minecraft:can_climb":{
+      },
+      "minecraft:movement.basic":{
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_water": true
+      },
+      "minecraft:scale": {
+        "value": 1.2
+      },
+      "minecraft:behavior.nearest_attackable_target":{
+          "priority": 1,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_tamed",
+                "value": false
+              },
+              "entity_type":"mob",
+              "max_dist": 30,
+              "must_see": true,
+            },
+          ]
+        },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.melee_attack":{
+        "priority": 4,
+        "track_target": true,
+        "speed_multiplier":1.50
+      },
+      "minecraft:behavior.follow_owner": {
+        "priority": 3,
+        "sped_multiplier": 2,
+        "start_distance": 5,
+        "stop_distance": 3,
+        "can_teleport": false,
+        "ignore_vibration": false
+      },
+      "minecraft:behavior.look_at_target": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:behavior.look_at_player":{
+        "priority": 7,
+        "look_distance": 8
+      },
+      "minecraft:behavior.pickup_items":{
+        "priority": 5,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 1.0,
+        "pickup_based_on_chance": true
+      },
+    }
+  }
+}
