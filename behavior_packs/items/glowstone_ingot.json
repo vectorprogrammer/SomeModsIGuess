@@ -4,7 +4,6 @@
     "description": {
       "identifier": "featuresbedrock:glowstone_ingot",
       "menu_category": {
-        "group": "itemGroup.name.ingots",
         "category": "items"
       }
     },
