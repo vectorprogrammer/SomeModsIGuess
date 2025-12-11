@@ -28,7 +28,8 @@
       },
       "minecraft:wearable": {
         "slot": "slot.armor.chest",
-        "dispensable": true
+        "dispensable": true,
+        "protection": "8"
       },
       "minecraft:tags": {
         "tags": [
