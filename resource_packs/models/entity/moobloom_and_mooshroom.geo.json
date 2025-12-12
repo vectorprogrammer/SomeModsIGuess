@@ -3,7 +3,7 @@
   "minecraft:geometry": [
     {
       "description": {
-        "identifier": "geometry.generic_moobloom_and_mooshroom",
+        "identifier": "geometry.generic_moobloom",
         "texture_width": 64,
         "texture_height": 64,
         "visible_bounds_width": 3,
