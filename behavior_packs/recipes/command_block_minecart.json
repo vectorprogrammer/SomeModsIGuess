@@ -1,0 +1,28 @@
+{
+  "format_version": 1.21
+  "minecraft:recipe_shaped":{
+    "description": {
+      "identifier": "minecraft:command_block_minecart"
+      },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " $ "
+      "#M#"
+      "#$#"
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:end_crystal"
+    },
+    "$":{
+      "item":"minecraft:nether_star"
+    },
+    "M":{
+      "item":"minecraft:furnace_minecart"
+    }
+  },
+  "result":{
+    "item": "minecraft:command_block_minecart"
+    }
+  }
+}
