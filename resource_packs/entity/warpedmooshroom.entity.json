@@ -1,0 +1,39 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "featuresbedrock:warped_mooshroom",
+      "min_engine_version": "1.21.130",
+      "materials":{
+        "default":"entity"
+      },
+      "textures":{
+        "warped_mooshroom": "textures/entity/warped_mooshroom"
+      },
+      "geometry":{
+        "default":"geometry.warpedmooshroom"
+      },
+      "render_controllers":[
+        "controller.render.warpedmooshroom"
+      ],
+      "animations":[
+        {
+          "baby_transform":"animation.moobloom.baby_transform",
+          "walk": "animation.moobloom.walk",
+          "setup": "animation.moobloom.setup"
+        }
+      ],
+      "animation_controllers":[
+        {
+          "baby":"animation.control.moobloom.baby"
+        },
+        {
+          "move":"animation.control.moobloom.move"
+        },
+        {
+          "setup":"animation.control.moobloom.setup"
+        }
+      ]
+    },
+  }
+}
