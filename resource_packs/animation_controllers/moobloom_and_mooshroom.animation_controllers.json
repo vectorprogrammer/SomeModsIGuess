@@ -1,7 +1,7 @@
 {
   "format_version": "1.10.0",
   "animation_controllers": {
-    "controller.animation.mooshroom.baby": {
+    "controller.animation.moobloom.baby": {
       "initial_state": "default",
       "states": {
         "default":{
@@ -9,7 +9,7 @@
         }
       }
     },
-    "controller.animation.mooshroom.move":{
+    "controller.animation.moobloom.move":{
       "initial_state": "default",
       "states": {
         "default":{
@@ -22,7 +22,7 @@
         }
       }
     },
-    "controller.animation.mooshroom.setup":{
+    "controller.animation.moobloom.setup":{
       "initial_state":"default",
       "states": {
         "default": {
